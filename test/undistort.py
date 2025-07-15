@@ -1,6 +1,6 @@
 import cv2
 import numpy as np
-from utils import update_undistort_map
+from surround_view import update_undistort_map
 
 # 相机内参
 camera_matrix = np.array([[3.0245305983229298e+02, 0.0,                    4.9664001463163459e+02],
@@ -9,7 +9,7 @@ camera_matrix = np.array([[3.0245305983229298e+02, 0.0,                    4.966
 # 畸变系数
 dist_coeffs = np.array([-4.3735601598704078e-02, 2.1692522970939803e-02, -2.6388839028513571e-02, 8.4123126605702321e-03])
 
-img = cv2.imread("images/front.png")
+img = cv2.imread("../images/front.png")
 if img is None:
     raise FileNotFoundError("找不到图片 images/front.png")
 

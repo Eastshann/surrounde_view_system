@@ -42,6 +42,7 @@ while True:
         if len(src) == 4:
             matrix = cv2.getPerspectiveTransform(np.array(src, dtype=np.float32),
                                                  np.array(dst, dtype=np.float32))
+            print(matrix)
             aerial_img = cv2.warpPerspective(undistort_img2, matrix, aerial_view_shape)
             cv2.imshow("aerail_Image", aerial_img)
         else:
