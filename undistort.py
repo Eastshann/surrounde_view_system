@@ -31,6 +31,7 @@ def undistort_display(scale, shift):
 
 while True:
     result = undistort_display(scale, shift)
+    save_img = result.copy()
     display_text = f"scale: {scale}, shift: {shift}"
     cv2.putText(result, display_text, (10, 30),
                 cv2.FONT_HERSHEY_SIMPLEX, 0.7, (0, 255, 0), 2)
@@ -56,5 +57,10 @@ while True:
         shift[1] -= 5
     elif key == ord('\''):
         shift[1] += 5
+
+    elif key == ord('s'):
+        cv2.imwrite("undistort.jpg", save_img)
+        print(img)
+        print("save")
 
 cv2.destroyAllWindows()
