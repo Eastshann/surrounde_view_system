@@ -1,5 +1,18 @@
 import numpy as np
 
+
+def reshape_yaml_data(data, key_name):
+    """将yaml数据还原"""
+    if data[key_name]["rows"] > 1:
+        reshaped_data = np.array(data[key_name]["data"]).reshape(
+            data[key_name]["rows"],
+            data[key_name]["cols"]
+        )
+    else:
+        reshaped_data = np.array(data[key_name]["data"])
+
+    return reshaped_data
+
 def update_undistort_map(camera_matrix, scale, shift):
     """
     生成校正映射表
