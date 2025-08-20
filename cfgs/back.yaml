@@ -1,0 +1,51 @@
+# 大华登录配置
+device_id: 1
+ip: 192.168.110.12
+port: 37777
+username: admin
+password: xy123456
+channel: 0
+stream_type: sub
+
+# 相机参数
+camera_matrix:
+  rows: 3
+  cols: 3
+  data: [ 393.81190115, 0.,           325.53752376,
+          0.,           391.89879185, 247.76582987,
+          0.,           0.,           1. ]
+
+dist_coeffs:
+  rows: 4
+  cols: 1
+  data: [ -5.82369268e-01, 2.26288132e-01, -3.14466219e-03, 4.76336922e-04 ]
+
+xi: 1.21658129
+
+resolution:
+  rows: 2
+  cols: 1
+  data: [ 640, 480 ]
+
+# 投影变换
+project_matrix:
+  rows: 3
+  cols: 3
+  data: [ -2.641521807610288,    -4.205296627738128,    1417.172041894985,
+          -0.1209213963935816,   -3.829177552463431,    872.0851107905137,
+          -0.000256212232022138, -0.006930378367347741, 1 ]
+project_resolution:
+  rows: 2
+  cols: 1
+  data: [ 1200, 400 ]
+
+# 缩放偏移
+scale_xy:
+  rows: 2
+  cols: 1
+  data: [ 0.33, 0.33 ]
+
+shift_xy:
+  rows: 2
+  cols: 1
+  data: [ 0., -106. ]

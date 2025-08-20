@@ -1,0 +1,29 @@
+# 环视图
+total:
+  resolution:
+    rows: 2
+    cols: 1
+    data: [ 1200, 1200 ]
+
+# 标定板
+board:
+  width: 400
+  height: 400
+
+# 机器人
+machine:
+  width: 400
+  height: 400
+
+# 间隔
+inner:
+  width: 400
+  height: 400
+
+# 外扩
+shift:
+  width: 400
+  height: 400
+
+weights_path: D:\Projects\Work\06_dahua_surround\test\weights.png
+masks_path: D:\Projects\Work\06_dahua_surround\test\masks.png
